@@ -19,8 +19,8 @@
   --ground:        #e0c068;
   --dragon:        #7038f8;
   --flying:        #a890f0;
-  --font-pixel:    'Press Start 2P', monospace;
-  --font-body:     'Nunito', sans-serif;
+  --font-pixel:    Consolas, 'Courier New', monospace;
+  --font-body:     Arial, Helvetica, sans-serif;
   --radius:        12px;
   --shadow:        0 4px 24px rgba(0,0,0,0.6);
   --transition:    0.3s ease;
@@ -105,14 +105,14 @@ kbd {
 
 .nav-links {
   display: flex;
-  gap: 18px;
+  gap: 14px;
   list-style: none;
 }
 
 .nav-links a {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -734,6 +734,37 @@ kbd {
   text-align: center;
 }
 
+.heuristica { background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-dark) 100%); }
+
+.heuristic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.heuristic-grid article,
+.heuristic-notes {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.heuristic-grid h3,
+.heuristic-notes h3 {
+  color: var(--gold);
+  font-size: 0.55rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.heuristic-grid p,
+.heuristic-notes p {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
 /* ---- DEV ---- */
 .devs { background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-dark) 100%); }
 
@@ -859,6 +890,7 @@ kbd {
   .boss-card.boss-final { grid-column: span 2; }
   .controls-grid { grid-template-columns: 1fr; }
   .download-grid { grid-template-columns: 1fr; }
+  .heuristic-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* Menu mobile — checkbox hack */
   .nav-toggle { display: block; }
@@ -885,6 +917,7 @@ kbd {
   .screens-grid  { grid-template-columns: 1fr; }
   .log-list article { grid-template-columns: 1fr; }
   .dev-grid      { grid-template-columns: 1fr; }
+  .heuristic-grid { grid-template-columns: 1fr; }
   .level-card    { flex-direction: column; }
   .level-number  { min-width: auto; }
   .footer .container { flex-direction: column; text-align: center; }
