@@ -645,12 +645,16 @@ kbd {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 12px;
+  max-width: 920px;
+  margin: 0 auto;
 }
 
 .video-frame video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center center;
   background: #000;
   border-radius: 8px;
 }
