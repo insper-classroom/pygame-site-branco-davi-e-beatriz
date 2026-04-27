@@ -745,6 +745,12 @@ kbd {
   margin-bottom: 48px;
 }
 
+.dev-solo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
 .dev-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
