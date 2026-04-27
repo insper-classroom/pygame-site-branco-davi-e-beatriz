@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PokéJogo — Seja o mais forte!</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- NAVBAR (mobile: checkbox hack sem JS) -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <span class="nav-logo pixel">PokéJogo</span>
+      <input type="checkbox" id="menu-open" class="menu-checkbox">
+      <label for="menu-open" class="nav-toggle" aria-label="Menu">☰</label>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#starters">Starters</a></li>
+        <li><a href="#gameplay">Gameplay</a></li>
+        <li><a href="#niveis">Níveis</a></li>
+        <li><a href="#chefoes">Chefões</a></li>
+        <li><a href="#controles">Controles</a></li>
+        <li><a href="#download">Download</a></li>
+        <li><a href="#devlog">Devlog</a></li>
+        <li><a href="#dev">Dev</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+
+    <!-- Estrelas puras em CSS -->
+    <div class="stars">
+      <div class="star" style="top:4%;left:8%;width:2px;height:2px;animation-delay:0s;animation-duration:3.1s"></div>
+      <div class="star" style="top:12%;left:22%;width:1px;height:1px;animation-delay:0.5s;animation-duration:2.4s"></div>
+      <div class="star" style="top:7%;left:45%;width:2px;height:2px;animation-delay:1.2s;animation-duration:3.8s"></div>
+      <div class="star" style="top:18%;left:67%;width:1px;height:1px;animation-delay:0.3s;animation-duration:2.7s"></div>
+      <div class="star" style="top:3%;left:80%;width:2px;height:2px;animation-delay:1.8s;animation-duration:3.2s"></div>
+      <div class="star" style="top:25%;left:5%;width:1px;height:1px;animation-delay:0.7s;animation-duration:4.1s"></div>
+      <div class="star" style="top:30%;left:35%;width:2px;height:2px;animation-delay:2.1s;animation-duration:2.9s"></div>
+      <div class="star" style="top:15%;left:55%;width:1px;height:1px;animation-delay:1.5s;animation-duration:3.5s"></div>
+      <div class="star" style="top:40%;left:75%;width:2px;height:2px;animation-delay:0.9s;animation-duration:2.6s"></div>
+      <div class="star" style="top:50%;left:15%;width:1px;height:1px;animation-delay:2.4s;animation-duration:4.0s"></div>
+      <div class="star" style="top:55%;left:88%;width:2px;height:2px;animation-delay:0.2s;animation-duration:3.3s"></div>
+      <div class="star" style="top:62%;left:42%;width:1px;height:1px;animation-delay:1.1s;animation-duration:2.8s"></div>
+      <div class="star" style="top:70%;left:60%;width:2px;height:2px;animation-delay:1.7s;animation-duration:3.6s"></div>
+      <div class="star" style="top:20%;left:92%;width:1px;height:1px;animation-delay:0.6s;animation-duration:2.5s"></div>
+      <div class="star" style="top:80%;left:28%;width:2px;height:2px;animation-delay:2.8s;animation-duration:3.0s"></div>
+      <div class="star" style="top:10%;left:72%;width:1px;height:1px;animation-delay:1.9s;animation-duration:4.2s"></div>
+      <div class="star" style="top:35%;left:50%;width:2px;height:2px;animation-delay:0.4s;animation-duration:3.7s"></div>
+      <div class="star" style="top:45%;left:3%;width:1px;height:1px;animation-delay:2.2s;animation-duration:2.3s"></div>
+      <div class="star" style="top:58%;left:18%;width:2px;height:2px;animation-delay:0.8s;animation-duration:3.9s"></div>
+      <div class="star" style="top:74%;left:82%;width:1px;height:1px;animation-delay:1.4s;animation-duration:2.2s"></div>
+      <div class="star" style="top:85%;left:48%;width:2px;height:2px;animation-delay:2.6s;animation-duration:3.4s"></div>
+      <div class="star" style="top:90%;left:70%;width:1px;height:1px;animation-delay:0.1s;animation-duration:4.3s"></div>
+      <div class="star" style="top:22%;left:30%;width:2px;height:2px;animation-delay:1.6s;animation-duration:2.8s"></div>
+      <div class="star" style="top:68%;left:10%;width:1px;height:1px;animation-delay:2.9s;animation-duration:3.1s"></div>
+      <div class="star" style="top:42%;left:95%;width:2px;height:2px;animation-delay:0.3s;animation-duration:3.6s"></div>
+      <div class="star" style="top:6%;left:38%;width:1px;height:1px;animation-delay:1.3s;animation-duration:2.9s"></div>
+      <div class="star" style="top:78%;left:55%;width:2px;height:2px;animation-delay:2.0s;animation-duration:4.0s"></div>
+      <div class="star" style="top:33%;left:85%;width:1px;height:1px;animation-delay:0.5s;animation-duration:3.2s"></div>
+      <div class="star" style="top:16%;left:12%;width:2px;height:2px;animation-delay:1.0s;animation-duration:2.6s"></div>
+      <div class="star" style="top:95%;left:20%;width:1px;height:1px;animation-delay:2.3s;animation-duration:3.8s"></div>
+    </div>
+
+    <div class="hero-content">
+      <img src="assets/images/titulo.png" alt="PokéJogo" class="hero-logo">
+      <p class="hero-tagline pixel">Escolha seu Pokémon.<br>Enfrente os maiores desafios.<br>Torne-se o mais forte!</p>
+      <a href="#sobre" class="btn btn-primary">Começar Aventura ▶</a>
+    </div>
+
+    <!-- Pokémons caminhando (apenas CSS) -->
+    <div class="hero-walkers">
+      <img class="walker walker-1" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/4.gif" alt="Charmander">
+      <img class="walker walker-2" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif" alt="Pikachu">
+      <img class="walker walker-3" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif" alt="Squirtle">
+      <img class="walker walker-4" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt="Bulbasaur">
+      <img class="walker walker-5" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/133.gif" alt="Eevee">
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="section sobre" id="sobre">
+    <div class="container">
+      <h2 class="section-title pixel">O que é o PokéJogo?</h2>
+      <div class="sobre-grid">
+        <div class="sobre-text">
+          <p>PokéJogo é um RPG de ação top-down inspirado em <strong>Pokémon Quest</strong>, desenvolvido como projeto acadêmico na <strong>Insper</strong>. Você escolhe um dos três Pokémon iniciais da Geração I e enfrenta quatro níveis repletos de inimigos selvagens e chefões poderosos.</p>
+          <p>Com um sistema de batalha dinâmico, fraquezas e resistências de tipo, e até mesmo uma <strong>Mega Evolução</strong> disponível no final da jornada, PokéJogo combina nostalgia com mecânicas originais e desafiadoras.</p>
+          <div class="sobre-badges">
+            <span class="badge badge-genre">RPG de Ação</span>
+            <span class="badge badge-pov">Top-Down</span>
+            <span class="badge badge-platform">PC (Python)</span>
+            <span class="badge badge-players">1 Jogador</span>
+          </div>
+        </div>
+        <div class="sobre-art">
+          <div class="art-frame">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png" alt="Rayquaza" class="art-pokemon">
+            <p class="art-caption pixel">Rayquaza — Boss Final</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STARTERS -->
+  <section class="section starters" id="starters">
+    <div class="container">
+      <h2 class="section-title pixel">Escolha seu Starter</h2>
+      <p class="section-subtitle">Cada Pokémon tem seu próprio ataque de tipo único e cadeia de evolução!</p>
+      <div class="starters-grid">
+
+        <!-- Bulbasaur -->
+        <div class="starter-card grass">
+          <div class="starter-type-badge"><span class="type-icon">🌿</span> Planta</div>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur" class="starter-img">
+          <h3 class="starter-name pixel">Bulbasaur</h3>
+          <p class="starter-desc">O starter mais equilibrado. Seus ataques de planta são devastadores contra tipos água e rocha!</p>
+          <div class="evolution-chain">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt="Bulbasaur" title="Bulbasaur">
+            <span class="evo-arrow pixel">→</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/2.gif" alt="Ivysaur" title="Ivysaur">
+            <span class="evo-arrow pixel">→</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/3.gif" alt="Venusaur" title="Venusaur">
+            <span class="evo-mega pixel">✦ MEGA</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10033.png" alt="Mega Venusaur" title="Mega Venusaur" class="mega-sprite">
+          </div>
+          <div class="starter-stats">
+            <div class="stat"><span>Ataque</span><div class="stat-bar"><div class="stat-fill grass-fill" style="--w:65%"></div></div></div>
+            <div class="stat"><span>Defesa</span><div class="stat-bar"><div class="stat-fill grass-fill" style="--w:75%"></div></div></div>
+            <div class="stat"><span>Velocidade</span><div class="stat-bar"><div class="stat-fill grass-fill" style="--w:55%"></div></div></div>
+          </div>
+        </div>
+
+        <!-- Charmander -->
+        <div class="starter-card fire">
+          <div class="starter-type-badge"><span class="type-icon">🔥</span> Fogo</div>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Charmander" class="starter-img">
+          <h3 class="starter-name pixel">Charmander</h3>
+          <p class="starter-desc">O mais poderoso no ataque! Ataques de fogo destroem inimigos de planta e aço com facilidade.</p>
+          <div class="evolution-chain">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/4.gif" alt="Charmander" title="Charmander">
+            <span class="evo-arrow pixel">→</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/5.gif" alt="Charmeleon" title="Charmeleon">
+            <span class="evo-arrow pixel">→</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/6.gif" alt="Charizard" title="Charizard">
+            <span class="evo-mega pixel">✦ MEGA</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10035.png" alt="Mega Charizard Y" title="Mega Charizard Y" class="mega-sprite">
+          </div>
+          <div class="starter-stats">
+            <div class="stat"><span>Ataque</span><div class="stat-bar"><div class="stat-fill fire-fill" style="--w:85%"></div></div></div>
+            <div class="stat"><span>Defesa</span><div class="stat-bar"><div class="stat-fill fire-fill" style="--w:50%"></div></div></div>
+            <div class="stat"><span>Velocidade</span><div class="stat-bar"><div class="stat-fill fire-fill" style="--w:80%"></div></div></div>
+          </div>
+        </div>
+
+        <!-- Squirtle -->
+        <div class="starter-card water">
+          <div class="starter-type-badge"><span class="type-icon">💧</span> Água</div>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Squirtle" class="starter-img">
+          <h3 class="starter-name pixel">Squirtle</h3>
+          <p class="starter-desc">O mais resistente! Ataques de água são super efetivos contra fogo e rocha. Ótimo para iniciantes.</p>
+          <div class="evolution-chain">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif" alt="Squirtle" title="Squirtle">
+            <span class="evo-arrow pixel">→</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/8.gif" alt="Wartortle" title="Wartortle">
+            <span class="evo-arrow pixel">→</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/9.gif" alt="Blastoise" title="Blastoise">
+            <span class="evo-mega pixel">✦ MEGA</span>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10036.png" alt="Mega Blastoise" title="Mega Blastoise" class="mega-sprite">
+          </div>
+          <div class="starter-stats">
+            <div class="stat"><span>Ataque</span><div class="stat-bar"><div class="stat-fill water-fill" style="--w:70%"></div></div></div>
+            <div class="stat"><span>Defesa</span><div class="stat-bar"><div class="stat-fill water-fill" style="--w:90%"></div></div></div>
+            <div class="stat"><span>Velocidade</span><div class="stat-bar"><div class="stat-fill water-fill" style="--w:60%"></div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GAMEPLAY -->
+  <section class="section gameplay" id="gameplay">
+    <div class="container">
+      <h2 class="section-title pixel">Como Jogar</h2>
+      <p class="section-subtitle">Mecânicas simples de aprender, difíceis de dominar</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚔️</div>
+          <h3 class="pixel">Tackle</h3>
+          <p>Dê um dash devastador no inimigo! Alcance de 150px com 600ms de cooldown. Pressione <kbd>Espaço</kbd> ou <kbd>Q</kbd>.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">✨</div>
+          <h3 class="pixel">Ataque de Tipo</h3>
+          <p>Dispare um ataque especial baseado no tipo do seu starter: fogo, água ou planta! Pressione <kbd>E</kbd> ou <kbd>X</kbd>.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💎</div>
+          <h3 class="pixel">Mega Pedra</h3>
+          <p>Coletada após derrotar Dragonite no Nível 3. Ative sua Mega Evolução no Nível 4 com <kbd>R</kbd> ou <kbd>RB</kbd>!</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🗺️</div>
+          <h3 class="pixel">Movimento</h3>
+          <p>Explore o mapa top-down com <kbd>WASD</kbd> ou o analógico do controle. Evite colisões com árvores, pedras e cactos.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧬</div>
+          <h3 class="pixel">Fraquezas</h3>
+          <p>Use o sistema de tipos a seu favor! Ataques super efetivos causam 2× de dano. Conheça as fraquezas dos chefões.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎮</div>
+          <h3 class="pixel">Controle</h3>
+          <p>Suporte completo a joystick com hot-swap! Conecte ou desconecte o controle a qualquer momento durante o jogo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NÍVEIS -->
+  <section class="section niveis" id="niveis">
+    <div class="container">
+      <h2 class="section-title pixel">Os Níveis</h2>
+      <p class="section-subtitle">4 mundos únicos com inimigos cada vez mais desafiadores</p>
+      <div class="levels-timeline">
+
+        <div class="level-card">
+          <div class="level-number pixel">01</div>
+          <div class="level-content">
+            <div class="level-header">
+              <span class="level-icon">🌲</span>
+              <h3 class="pixel">Floresta</h3>
+              <span class="difficulty easy">Fácil</span>
+            </div>
+            <p>Seu primeiro passo na aventura. Enfrente Pikachu, Rattata, Growlithe e Eevee em ondas crescentes até o confronto com o terrível <strong>Hypno</strong>!</p>
+            <div class="level-enemies">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/25.gif" title="Pikachu" alt="Pikachu">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/19.gif" title="Rattata" alt="Rattata">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/58.gif" title="Growlithe" alt="Growlithe">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/133.gif" title="Eevee" alt="Eevee">
+              <span class="boss-label pixel">BOSS →</span>
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/97.gif" title="Hypno" alt="Hypno" class="boss-sprite">
+            </div>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-number pixel">02</div>
+          <div class="level-content">
+            <div class="level-header">
+              <span class="level-icon">🏜️</span>
+              <h3 class="pixel">Deserto</h3>
+              <span class="difficulty medium">Médio</span>
+            </div>
+            <p>O sol escaldante e a areia tornam tudo mais difícil. Enfrente Raticate, Sandshrew, Raichu e mais até o colossal <strong>Golem</strong>!</p>
+            <div class="level-enemies">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/20.gif" title="Raticate" alt="Raticate">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/27.gif" title="Sandshrew" alt="Sandshrew">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/26.gif" title="Raichu" alt="Raichu">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/50.gif" title="Diglett" alt="Diglett">
+              <span class="boss-label pixel">BOSS →</span>
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/76.gif" title="Golem" alt="Golem" class="boss-sprite">
+            </div>
+          </div>
+        </div>
+
+        <div class="level-card">
+          <div class="level-number pixel">03</div>
+          <div class="level-content">
+            <div class="level-header">
+              <span class="level-icon">🪨</span>
+              <h3 class="pixel">Caverna</h3>
+              <span class="difficulty hard">Difícil</span>
+            </div>
+            <p>Nas profundezas sombrias você enfrenta Pokémon da segunda e terceira geração. Derrote <strong>Dragonite</strong> e ganhe sua Mega Pedra!</p>
+            <div class="level-enemies">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/254.gif" title="Sceptile" alt="Sceptile">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/257.gif" title="Blaziken" alt="Blaziken">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/260.gif" title="Swampert" alt="Swampert">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/169.gif" title="Crobat" alt="Crobat">
+              <span class="boss-label pixel">BOSS →</span>
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/149.gif" title="Dragonite" alt="Dragonite" class="boss-sprite">
+            </div>
+          </div>
+        </div>
+
+        <div class="level-card level-final">
+          <div class="level-number pixel">04</div>
+          <div class="level-content">
+            <div class="level-header">
+              <span class="level-icon">🌟</span>
+              <h3 class="pixel">Floresta Final</h3>
+              <span class="difficulty legendary">Lendário</span>
+            </div>
+            <p>O desafio supremo! Enfrente Pokémon lendários como Raikou, Articuno, Zapdos e Moltres antes do confronto épico com <strong>Rayquaza &amp; Ho-Oh</strong>!</p>
+            <div class="level-enemies">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/243.gif" title="Raikou" alt="Raikou">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/144.gif" title="Articuno" alt="Articuno">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/145.gif" title="Zapdos" alt="Zapdos">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/146.gif" title="Moltres" alt="Moltres">
+              <span class="boss-label pixel">BOSS →</span>
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png" title="Rayquaza" alt="Rayquaza" class="boss-sprite boss-art">
+              <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png" title="Ho-Oh" alt="Ho-Oh" class="boss-sprite boss-art">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CHEFÕES -->
+  <section class="section chefoes" id="chefoes">
+    <div class="container">
+      <h2 class="section-title pixel">Os Chefões</h2>
+      <p class="section-subtitle">Cada chefão guarda o caminho para o próximo mundo</p>
+      <div class="bosses-grid">
+        <div class="boss-card">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/97.png" alt="Hypno" class="boss-art-img">
+          <h3 class="pixel">Hypno</h3>
+          <p class="boss-level pixel">Nível 1</p>
+          <p>O mestre do hipnotismo guarda a saída da floresta. Cuidado com seus ataques psíquicos!</p>
+          <div class="type-chips"><span class="type-chip psychic">Psíquico</span></div>
+        </div>
+        <div class="boss-card">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/76.png" alt="Golem" class="boss-art-img">
+          <h3 class="pixel">Golem</h3>
+          <p class="boss-level pixel">Nível 2</p>
+          <p>Uma rocha imensa que domina o deserto. Use ataques de água ou planta para vencer!</p>
+          <div class="type-chips"><span class="type-chip rock">Pedra</span><span class="type-chip ground">Terra</span></div>
+        </div>
+        <div class="boss-card">
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/149.png" alt="Dragonite" class="boss-art-img">
+          <h3 class="pixel">Dragonite</h3>
+          <p class="boss-level pixel">Nível 3</p>
+          <p>O guardião da caverna! Ao derrotá-lo você ganha a preciosa Mega Pedra para evoluir ainda mais.</p>
+          <div class="type-chips"><span class="type-chip dragon">Dragão</span><span class="type-chip flying">Voador</span></div>
+        </div>
+        <div class="boss-card boss-final">
+          <div class="boss-duo">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/384.png" alt="Rayquaza" class="boss-art-img">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/250.png" alt="Ho-Oh" class="boss-art-img">
+          </div>
+          <h3 class="pixel">Rayquaza &amp; Ho-Oh</h3>
+          <p class="boss-level pixel">Nível 4 — BOSS FINAL</p>
+          <p>Dois lendários ao mesmo tempo! Ative sua Mega Evolução e use tudo que aprendeu para se tornar o Pokémon mais forte do mundo!</p>
+          <div class="type-chips">
+            <span class="type-chip dragon">Dragão</span>
+            <span class="type-chip flying">Voador</span>
+            <span class="type-chip fire">Fogo</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTROLES -->
+  <section class="section controles" id="controles">
+    <div class="container">
+      <h2 class="section-title pixel">Controles</h2>
+      <div class="controls-grid">
+        <div class="controls-group">
+          <h3 class="pixel">⌨️ Teclado</h3>
+          <div class="key-map">
+            <div class="key-row"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><span>Mover</span></div>
+            <div class="key-row"><kbd>Espaço</kbd> / <kbd>Q</kbd><span>Tackle (dash)</span></div>
+            <div class="key-row"><kbd>E</kbd><span>Ataque de Tipo</span></div>
+            <div class="key-row"><kbd>R</kbd><span>Mega Evolução</span></div>
+            <div class="key-row"><kbd>ESC</kbd><span>Pausar / Voltar</span></div>
+          </div>
+        </div>
+        <div class="controls-group">
+          <h3 class="pixel">🎮 Controle</h3>
+          <div class="key-map">
+            <div class="key-row"><kbd>Analógico</kbd><span>Mover</span></div>
+            <div class="key-row"><kbd>A</kbd><span>Tackle (dash)</span></div>
+            <div class="key-row"><kbd>X</kbd><span>Ataque de Tipo</span></div>
+            <div class="key-row"><kbd>RB</kbd><span>Mega Evolução</span></div>
+            <div class="key-row"><kbd>B</kbd><span>Voltar</span></div>
+          </div>
+        </div>
+        <div class="controls-tips">
+          <h3 class="pixel">💡 Dicas</h3>
+          <ul>
+            <li>🔴 Você tem <strong>5 pontos de vida</strong>. Cada golpe tira 1 HP.</li>
+            <li>⚡ Após ser atingido, você tem <strong>800ms de invencibilidade</strong>.</li>
+            <li>🏃 O Tackle dá um impulso de <strong>18px de knockback</strong> no inimigo.</li>
+            <li>🧬 Ataque de Tipo causa <strong>1.5× mais dano</strong> que o Tackle.</li>
+            <li>⚠️ Derrote <strong>todos os inimigos comuns</strong> do mapa para liberar o chefão.</li>
+            <li>💎 A Mega Pedra é coletada no <strong>Nível 3</strong> e ativada no <strong>Nível 4</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD / EXECUÇÃO -->
+  <section class="section download" id="download">
+    <div class="container">
+      <h2 class="section-title pixel">Baixar e Executar</h2>
+      <p class="section-subtitle">Pacote do jogo, vídeo de demonstração e instruções para rodar localmente</p>
+      <div class="download-grid">
+        <div class="download-panel">
+          <h3 class="pixel">Download</h3>
+          <p>Baixe o pacote compactado do projeto e extraia a pasta antes de executar o jogo.</p>
+          <a href="downloads/pokejogo.zip" class="btn btn-primary" download>Baixar ZIP</a>
+        </div>
+        <div class="download-panel">
+          <h3 class="pixel">Como Executar</h3>
+          <ol class="steps">
+            <li>Instale Python 3.10 ou superior.</li>
+            <li>Instale o Pygame com <kbd>pip install pygame</kbd>.</li>
+            <li>Abra a pasta extraída no terminal.</li>
+            <li>Execute <kbd>python jogo.py</kbd>.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="video-frame">
+        <video controls poster="assets/images/screenshot-menu.png">
+          <source src="assets/videos/pokejogo-demo.mp4" type="video/mp4">
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- TELAS DO JOGO -->
+  <section class="section screenshots" id="screenshots">
+    <div class="container">
+      <h2 class="section-title pixel">Telas do Jogo</h2>
+      <p class="section-subtitle">Registros reais do projeto em funcionamento</p>
+      <div class="screens-grid">
+        <figure>
+          <img src="assets/images/screenshot-menu.png" alt="Tela de menu do PokéJogo">
+          <figcaption>Menu principal</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/screenshot-selecao.png" alt="Tela de seleção de Pokémon">
+          <figcaption>Seleção de Pokémon</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/screenshot-niveis.png" alt="Tela de seleção de níveis">
+          <figcaption>Seleção de níveis</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/images/screenshot-batalha.png" alt="Tela de batalha top-down">
+          <figcaption>Batalha top-down</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVLOG / CRAP -->
+  <section class="section devlog" id="devlog">
+    <div class="container">
+      <h2 class="section-title pixel">Log de Desenvolvimento</h2>
+      <p class="section-subtitle">Resumo das principais etapas do projeto</p>
+      <div class="log-list">
+        <article>
+          <span class="log-date pixel">18/04</span>
+          <p>Estrutura inicial de telas, menu principal, seleção de Pokémon e navegação por teclado/controle.</p>
+        </article>
+        <article>
+          <span class="log-date pixel">19/04</span>
+          <p>Implementação do combate top-down, inimigos comuns, chefões e sistema de progressão entre níveis.</p>
+        </article>
+        <article>
+          <span class="log-date pixel">20/04</span>
+          <p>Ajustes de sprites, colisões, HUD, ataques de tipo, Tackle e feedback visual de batalha.</p>
+        </article>
+        <article>
+          <span class="log-date pixel">21/04-24/04</span>
+          <p>Balanceamento de hordas, suporte a controle, telas de ajuda, créditos, configurações e melhorias de áudio.</p>
+        </article>
+        <article>
+          <span class="log-date pixel">26/04-27/04</span>
+          <p>Implementação da Mega Stone, animação de evolução, revisão da página do jogo e preparação para publicação.</p>
+        </article>
+      </div>
+      <div class="crap-report">
+        <h3 class="pixel">Relato CRAP</h3>
+        <p><strong>Contraste:</strong> usamos fundo escuro, amarelo nos títulos e cores por tipo para destacar ações e seções importantes.</p>
+        <p><strong>Repetição:</strong> cards, badges, títulos pixelados e botões mantêm um padrão visual consistente ao longo da página.</p>
+        <p><strong>Alinhamento:</strong> grids e blocos centralizados organizam as informações em colunas previsíveis.</p>
+        <p><strong>Proximidade:</strong> conteúdos relacionados ficam agrupados por tema: starters, gameplay, níveis, chefões, controles e execução.</p>
+      </div>
+      <figure class="sketch-frame">
+        <img src="assets/images/esboco-site.jpeg" alt="Esboço em papel da primeira versão da página">
+        <figcaption>Esboço inicial em papel usado para definir a estrutura da página.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DEV -->
+  <section class="section devs" id="dev">
+    <div class="container">
+      <h2 class="section-title pixel">Desenvolvedores</h2>
+      <p class="section-subtitle">Projeto acadêmico desenvolvido na Insper — Semestre 1</p>
+      <div class="dev-grid">
+        <div class="dev-card">
+          <div class="dev-avatar">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png" alt="Charizard" class="dev-pokemon">
+          </div>
+          <h3 class="pixel">Davi</h3>
+          <p class="dev-email">davids4@al.insper.edu.br</p>
+          <p>Desenvolvimento de sistemas, arquitetura do código, IA dos inimigos, mecânicas de batalha, design de níveis, assets visuais e experiência do jogador.</p>
+          <div class="dev-pokemon-label">Starter favorito: <strong>Charmander 🔥</strong></div>
+        </div>
+        <div class="dev-card">
+          <div class="dev-avatar">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/3.png" alt="Venusaur" class="dev-pokemon">
+          </div>
+          <h3 class="pixel">Beatriz</h3>
+          <p class="dev-email">Projeto Insper</p>
+          <p>Concepção do jogo, validação de gameplay, organização da experiência, testes, revisão da apresentação e decisões de design.</p>
+          <div class="dev-pokemon-label">Starter favorito: <strong>Bulbasaur 🌿</strong></div>
+        </div>
+      </div>
+      <div class="tech-stack">
+        <h3 class="pixel">Feito com</h3>
+        <div class="tech-badges">
+          <span class="tech-badge">Python 3.10+</span>
+          <span class="tech-badge">Pygame</span>
+          <span class="tech-badge">Pillow</span>
+          <span class="tech-badge">PokéAPI</span>
+          <span class="tech-badge">HTML5 + CSS3</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="pixel footer-title">PokéJogo</p>
+        <p>Projeto acadêmico — Insper, 2026 · Davi &amp; Beatriz</p>
+        <p class="footer-disclaimer">PokéJogo é um projeto educacional sem fins comerciais. Pokémon e todos os personagens relacionados são propriedade de Nintendo / Game Freak / Creatures Inc. Este projeto não tem afiliação com essas empresas.</p>
+      </div>
+      <div class="footer-pokemon">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/384.gif" alt="Rayquaza">
+      </div>
+    </div>
+  </footer>
+
+  <a href="#inicio" class="back-to-top">↑</a>
+
+</body>
+</html>
