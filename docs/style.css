@@ -105,14 +105,14 @@ kbd {
 
 .nav-links {
   display: flex;
-  gap: 24px;
+  gap: 18px;
   list-style: none;
 }
 
 .nav-links a {
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
